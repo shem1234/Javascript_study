@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // chartAt()
+        //console.log(f_name.charAt(3)) //e
+
+        let sentence = "My dog died today"
+        console.log(sentence.slice(3)) //dog d
+        console.log(sentence.slice()) // returns the original string
+
+        // lower and upper case
+        console.log(sentence.toLowerCase())
+        console.log(sentence.toUpperCase())
+
+        // trim
+        let y = "     x       xxxxxx       "
+        let trimmed = y.trim()
+        console.log(trimmed)
+        console.log(y.length) // 24
+        console.log(trimmed.length) // 13
+
+        let trimend = y.trimRight()
+        console.log(trimend)
+
+        let tristart = y.trimStart()
+        console.log(tristart)
+
+        // concut
+        let first_name = "Alice "
+        let last_name = "Kamau"
+
+        let full_name = first_name.concat(last_name)
+        console.log(full_name)
+
+        // alternatively
+        full_name = first_name + " " + last_name
+        console.log(full_name)
+
+        // end with and starts with
+        console.log(last_name.startsWith("Ka")) // true
+        console.log(first_name.endsWith("e")) // false, because there is a spacee at the end
+
+        // replace
+        let new_name = first_name.replace("A","E")
+        console.log(new_name) // Elice
+
+
+    </script>
+
+    
+
+
+</body>
+</html>
