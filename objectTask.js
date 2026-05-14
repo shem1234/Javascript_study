@@ -13,12 +13,13 @@ console.log(my_arr[2])
 console.log(my_arr[3][1])
 
 // 4. In the object with the key currency, add another key “amount” with value 90
-my_arr[3][2]["amount"] = 90
+my_arr[3][2].amount = 90
 console.log(my_arr[3][2])
 
 // 5. Reverse 987 to 789 without using an inbuilt -method or Assigning 789 manually.
 //      Hint: arrays can be reversed using reverse() functions
-my_arr[4] = my_arr[4].toString().split("").reverse().join("")
+//my_arr[4] = my_arr[4].toString().split("").reverse().join("")
+my_arr[4] = Number(my_arr[4].toString().split("").reverse().join(""))
 console.log(my_arr)
 
 // 6. Change the name “John” to “Jane” . 
