@@ -1002,3 +1002,18 @@ for (let i = 0; i < data.length; i++){
 pops = {"0-50m" : fifty, "51-100m" : hundred, ">100m" : over}
 
 console.log(pops)
+
+//Nested Loops Complex data structures
+//Task on complex data structures In the below complex data structure output the following:
+//  a)PostgreSQL b)Brand Strategy c)React
+
+let company = {
+name: "TechCorp", founded: 2010, location: { country: "Kenya", city: "Nairobi", address: { street: "Kenyatta Avenue", building: "Tech Plaza", floor: 5 } }, departments: [ { name: "Engineering", head: "Alice", employees: [ { id: 1, name: "John", role: "Frontend Developer",
+skills: ["JavaScript", "React", "CSS"] }, { id: 2, name: "Sarah", role: "Backend Developer",
+skills: ["Python", "Django", "PostgreSQL"] } ] }, { name: "Marketing", head: "Bob", employees: [ { id: 3, name: "Mike", role: "SEO Specialist",
+skills: ["SEO", "Google Analytics", "Content Writing"] }, { id: 4, name: "Jane", role: "Social Media Manager",
+skills: ["Facebook Ads", "Instagram", "Brand Strategy"] } ] } ], projects: [ { title: "E-commerce Website", deadline: "2025-09-30", team: [1, 2] Employee IDs }, { title: "Brand Awareness Campaign", deadline: "2025-10-15", team: [3, 4] } ] };
+
+break & continue
+
+console.log(company)
