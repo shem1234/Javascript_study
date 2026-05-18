@@ -157,51 +157,20 @@ console.log(grade)
 // #  print: “License suspended”.
 // # Once you learn functions,revisit this and write this code inside a function.
 let speed = Number(prompt("Enter the car speed: "))
+let speed_limit = 70
 
-if (speed <= 70){
+if (speed <= speed_limit){
+    console.log("Ok")
     res = "Ok"
 }    
-else if (speed > 70 && speed <= 75){
-    res = "Points: 1"
-}    
-else if (speed > 75 && speed <= 80){
-    res = "Points: 2"
-}    
-else if (speed > 80 && speed <= 85){
-    res = "Points: 3"    
-}    
-else if (speed > 85 && speed <= 90){
-    res = "Points: 4"
-}    
-else if (speed > 90 && speed <= 95){
-    res = "Points: 5"
-}    
-else if (speed > 95 && speed <= 100){
-    res = "Points: 6"
-}    
-else if (speed > 100 && speed <= 105){
-    res = "Points: 7"
-}   
-else if (speed > 105 && speed <= 110){
-    res = "Points: 8"
-}    
-else if (speed > 110 && speed <= 115){
-    res = "Points: 9"
-}    
-else if (speed > 115 && speed <= 120){
-    res = "Points: 10"
-}    
-else if (speed > 120 && speed <= 125){
-    res = "Points: 11"
-}    
-else if (speed > 125 && speed <= 130){
-    res = "Points: 12"
-}    
 else{
-    res = "License suspended"
-}    
-
-console.log(res)
+    if (parseInt((speed-speed_limit)/5+0.8) <= 12){
+        console.log("Points: " + parseInt((speed-speed_limit)/5+0.8))
+    }
+    else{        
+        console.log("License suspended")
+    }    
+}  
 
 // # TASK 9: Using Python or PHP or Java or Ruby or JavaScript
 // # Write a program called stars. It should prompt the user for a number, and it should print the number of stars till the number entered.
@@ -236,4 +205,5 @@ for (let i = 0; i < prods.length; i++) {
 }
 
 console.log(total_stock)
+
 
