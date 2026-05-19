@@ -1,34 +1,97 @@
-// // TASK 11: Using Python or PHP or Java or Ruby or JavaScript
-// // Write a program that takes the date of birth of a person and the program outputs the age in terms of years,months,days TODAY.datetime
-// // Once you learn functions,revisit this and write this code inside a function.
-// // import datetime
+// TASK 11: Using Python or PHP or Java or Ruby or JavaScript
+// Write a program that takes the date of birth of a person and the program outputs the age in terms of years,months,days TODAY.datetime
+// Once you learn functions,revisit this and write this code inside a function.
+// import datetime
 
-// //let x = prompt("Enter date (YYYY-MM-DD): ")
+let x = prompt("Enter date (YYYY-MM-DD): ")
 
-// //20260501,20260401,20260420,20260301,20260320,20260101,20260120,
+let yeare = String(x).slice(0,4)
+let monthe = String(x).slice(4,6)
+let daye = String(x).slice(6,8)
 
-// let x = [20251201,20251220,20251101,20251120,20250601,20250620,20250501,20250401,20250420,20250301,20250320,20250101,20250120,20241201,20241220,20241101,20241120,20240601,20240620
-// ,20240501,20240520,20240401,20240420,20240101,20240120,20231201,20231220,20231101,20231120,20230601,20230620,20230501,20230520
-// ,20230401,20230420,20230101,20230120]
+let today = new Date()
+let yeart = today.getFullYear();
+let montht = today.getMonth() + 1
+let dayt = today.getDate()
 
-// for(i = 0; i <= x.length; i++){
+let years = 0
+let months = 0
+let days = 0
 
-//     let yeare = String(x[i]).slice(0,4)
-//     let monthe = String(x[i]).slice(4,6)
-//     let daye = String(x[i]).slice(6,8)
+if(Number(yeare)+Number(monthe)+Number(daye) <= Number(yeart+montht+dayt) || yeare < yeart){
+   
+    if(dayt >= daye && montht >= monthe){
+        days = dayt - daye
+        months = montht - monthe
+        years = yeart - yeare
+        console.log(`Your age is ${years} years, ${months} month and ${days} days.`)
+    }
+    else if(dayt < daye && montht == monthe){
+        days = 30 - daye + dayt
+        months = 12 - monthe + montht - 1
+        years = yeart - yeare - 1
+        console.log(`Your age is ${years} years, ${months} month and ${days} days.`)
+    }
+    else if(dayt < daye && montht >= monthe){
+        days = 30 - daye + dayt
+        months = montht - monthe - 1
+        years = yeart - yeare
+        console.log(`Your age is ${years} years, ${months} month and ${days} days.`)
+    }
+    else if(dayt >= daye && montht < monthe){
+        days = dayt - daye
+        months = 12 - monthe + montht
+        years = yeart - yeare - 1
+        console.log(`Your age is ${years} years, ${months} month and ${days} days.`)
+    }
+    else if(dayt < daye && montht < monthe){
+        days = 30 - daye + dayt
+        months = 12 - monthe + montht - 1
+        years = yeart - yeare - 1
+        console.log(`Your age is ${years} years, ${months} month and ${days} days.`)
+    }
+}
+else{
+    console.log("Invalid date entered")
+}
 
-//     console.log(daye, monthe, yeare)
 
-//     let today = new Date()
-//     let yeart = today.getFullYear();
-//     let montht = today.getMonth() + 1
-//     let dayt = today.getDate()
 
-//     console.log(dayt, montht, yeart);
+//         if(montht >= monthe){
+//             months = montht - monthe
+//             if(yeart >= yeare){
+//                 years = yeart - yeare
+//             }
+//             else{
+//                 console.log("Invalid date entered")
+//             }
+//         }
+//         else{
+//             months = 12 - monthe + montht
+//         }
+//     }
+//     else{
+//         days = 30 - daye + dayt
+//         if(montht > monthe){
+//             months = montht - monthe - 1
+//             years = yeart - yeare
+//         }
+//         else if(montht = monthe){
+//             months = montht - monthe    // remove this
+//             years = yeart - yeare -1       //remove this
+//         }
+//         else{
+//             months = 12 - monthe + montht - 1
+//             years = yeart - yeare - 1
+//         }
+//     }
 
-//     let years = 0
-//     let months = 0
-//     let days = 0
+// console.log(`Your age is ${years} years, ${months} month and ${days} days.`)
+// }
+// else{
+//     console.log("Invalid date entered")
+// }
+// }
 
 // if(yeart = yeare && montht == monthe && dayt >= daye){
 //     days = dayt - daye
